@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="utf-8">
+        <title>Surfer_Brain</title>
+        <meta name="description" content="Aframe">
+        <script src="https://aframe.io/releases/0.2.0/aframe.js"></script>
+        <script src="aframe-keyboard-controls.js"></script>
+        <script src="aframe-proxy-controls.js"></script>
+        <script src="aframe-gltf.min.js"></script>
+        <script src="line-drawer.js"></script>
+      
+      
+        <script src="aframe-extra.js"></script>
+    </head>
+    <body>
+        <a-scene>
+           
+          
+            <a-sky id="backgroundCol" color="black"></a-sky>
+          
+            <a-entity position="-6 2.5 25" rotation="0 0 0"> 
+               <a-animation attribute="position" begin="10000" to="-6 10 6" dur="20000"></a-animation>
+               <a-animation attribute="rotation" begin="10000" to="-30 -30 0" dur="20000"></a-animation>
+               <a-animation attribute="rotation" begin="30000" from="-30 -30 0" to="-30 -60 0" dur="15000"></a-animation>
+              <a-animation attribute="rotation" begin="45000" from="-30 -60 0" to="-30 -30 0" dur="15000"></a-animation>
+              <a-animation attribute="position" begin="60000" from="-6 10 6" to="-6 5 6" dur="15000"></a-animation>
+         
+            <a-entity camera="near:0.1" look-controls keyboard-controls="cameraUse: true">
+
+               
+            </a-entity>
+            </a-entity>
+
+    
+    <a-assets>
+        <a-asset-item id="skull" src="models/skulled.ply"></a-asset-item>
+        <a-asset-item id="fibers" src="models/fibers.ply"></a-asset-item>
+        <a-asset-item id="fibers2" src="models/fibers2.ply"></a-asset-item>
+        <a-asset-item id="fibers3" src="models/fibers3.ply"></a-asset-item>
+        <a-asset-item id="fibers4" src="models/fibers4.ply"></a-asset-item>     
+        <a-asset-item id="tumor" src="models/tumor.ply"></a-asset-item>    
+        <a-asset-item id="leftHem" src="models/leftHem.ply"></a-asset-item>  
+        <a-asset-item id="rightHem" src="models/rh.ply"></a-asset-item>  
+        <a-asset-item id="CC2" src="models/CC2.obj"></a-asset-item>  
+        <a-asset-item id="CC2mtl" src="models/CC2.obj.mtl"></a-asset-item>  
+        <a-asset-item id="cc1" src="models/cc1.obj"></a-asset-item>   
+        <a-asset-item id="cc1mtl" src="models/cc1.obj.mtl"></a-asset-item>   
+        <a-asset-item id="brainstem" src="models/brainstem.obj"></a-asset-item>   
+        <a-asset-item id="brainstemmtl" src="models/brainstem.obj.mtl"></a-asset-item>   
+        <a-asset-item id="cerebellum" src="models/cerebellum.obj"></a-asset-item>  
+        <a-asset-item id="cerebellummtl" src="models/cerebellum.obj.mtl"></a-asset-item>  
+        <a-asset-item id="fornix" src="models/fornix.obj"></a-asset-item>   
+        <a-asset-item id="fornixmtl" src="models/fornix.obj.mtl"></a-asset-item>   
+        <a-asset-item id="pituitary" src="models/pituitary.obj"></a-asset-item>   
+        <a-asset-item id="pituitarymtl" src="models/pituitary.obj.mtl"></a-asset-item>   
+        <a-asset-item id="thalamus_actual" src="models/thalamus_actual.obj"></a-asset-item>   
+        <a-asset-item id="thalamus_actualmtl" src="models/thalamus_actual.obj.mtl"></a-asset-item>   
+
+
+    </a-assets> 
+   
+
+    
+    <a-entity rotation = "-90 -150 0">
+
+
+       <a-entity rotation="0 0 0"
+                scale="0.1 0.1 0.1"
+                ply-model="src: #skull;">
+
+        <a-animation attribute="visible" begin="30000" to="false" dur="15000"></a-animation>
+                </a-entity>
+      <a-entity rotation="0 0 0"
+                scale="0.1 0.1 0.1"
+                ply-model="src: #fibers;">
+<a-animation attribute="rotation" begin="77000" to="0 0 360" dur="20000"></a-animation>
+                </a-entity>
+      <a-entity rotation="0 0 0"
+                scale="0.1 0.1 0.1"
+                ply-model="src: #fibers2;">
+<a-animation attribute="rotation" begin="77000" to="0 0 360" dur="20000"></a-animation>
+                </a-entity>
+      <a-entity rotation="0 0 0"
+                scale="0.1 0.1 0.1"
+                ply-model="src: #fibers3;">
+<a-animation attribute="rotation" begin="77000" to="0 0 360" dur="20000"></a-animation>
+                </a-entity>
+      <a-entity rotation="0 0 0"
+                scale="0.1 0.1 0.1"
+                ply-model="src: #fibers4;">
+<a-animation attribute="rotation" begin="77000" to="0 0 360" dur="20000"></a-animation>
+                </a-entity>
+      <a-entity rotation="0 0 0"
+                scale="0.1 0.1 0.1"
+                ply-model="src: #tumor;">
+<a-animation attribute="rotation" begin="77000" to="0 0 360" dur="20000"></a-animation>
+                </a-entity>
+      <a-entity rotation="0 0 0"
+                scale="0.1 0.1 0.1"
+                ply-model="src: #leftHem;">
+<a-animation attribute="rotation" begin="77000" to="0 0 360" dur="20000"></a-animation>
+ <a-animation attribute="visible" begin="80000" to="false" dur="15000"></a-animation>
+                 </a-entity>
+      <a-entity rotation="0 0 0"
+                scale="0.1 0.1 0.1"
+                ply-model="src: #rightHem;">
+ 
+ <a-animation attribute="visible" begin="40000" to="false" dur="15000"></a-animation>
+                 </a-entity>
+
+
+
+    <a-entity obj-model="obj: #CC2; mtl:#CC2mtl"
+        rotation="0 0 0"
+        scale="0.1 0.1 0.1">
+ <a-animation attribute="visible" begin="75000" to="false" dur="15000"></a-animation>
+        </a-entity>
+
+    <a-entity obj-model="obj: #cc1; mtl:#cc1mtl"
+        rotation="0 0 0"
+        scale="0.1 0.1 0.1">
+        <a-animation attribute="visible" begin="75000" to="false" dur="15000"></a-animation>
+        </a-entity>
+
+     <a-entity obj-model="obj: #brainstem; mtl:#brainstemmtl" 
+        rotation="0 0 0"
+        scale="0.1 0.1 0.1"
+        material="color: #ffffe5; opacity: 0.5">
+
+        <a-animation attribute="rotation" begin="77000" to="0 0 360" dur="20000"></a-animation>
+        </a-entity>
+
+       
+
+     <a-entity obj-model="obj: #cerebellum; mtl:#cerebellummtl" 
+        rotation="0 0 0"
+        material="transparent:true"
+        scale="0.1 0.1 0.1">
+        <a-animation attribute="rotation" begin="77000" to="0 0 360" dur="20000"></a-animation>
+        </a-entity>
+    
+    <a-entity obj-model="obj: #fornix; mtl:#fornixmtl" 
+        rotation="0 0 0"
+        scale="0.1 0.1 0.1">
+        <a-animation attribute="visible" begin="75000" to="false" dur="15000"></a-animation>
+        </a-entity>
+
+    <a-entity obj-model="obj: #pituitary; mtl:#pituitarymtl" 
+        rotation="0 0 0"
+        scale="0.1 0.1 0.1">
+<a-animation attribute="visible" begin="75000" to="false" dur="15000"></a-animation>
+        </a-entity>
+
+    
+
+    <a-entity obj-model="obj: #thalamus_actual; mtl:#thalamus_actualmtl" 
+        rotation="0 0 0"
+        scale="0.1 0.1 0.1">
+
+        <a-animation attribute="visible" begin="75000" to="false" dur="15000"></a-animation>
+        </a-entity>
+
+
+</a-entity>
+      
+         
+
+    
+      <a-light type="ambient" color="#bbb"></a-light>
+      <a-light color="#ccc" position="0 30 0" distance="100" intensity="0.4" type="point"></a-light>
+      <a-light color="#ccc" position="3 10 -10" distance="50" intensity="0.4" type="point"></a-light>
+
+
+    </a-scene>
+
+
+  </body>
+</html>
